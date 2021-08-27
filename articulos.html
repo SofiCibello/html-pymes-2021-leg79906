@@ -20,10 +20,10 @@
   <h2>Art&iacute;culos (Listado)</h2>
   <hr>
 
-  <form action="" name="FormBusqueda">
+  <form action="" name="FrmBusqueda">
     <div>
       <label for="">Nombre: </label>
-      <input type="text" required>
+      <input type="text" name="Nombre" required>
     </div>
 
     <div>
@@ -38,7 +38,7 @@
   <hr>
  
   <div>
-    <button>
+    <button type="submit">
       Buscar
     </button>
 
@@ -66,9 +66,9 @@
         <td>15/01/2017</td>
         <td>NO</td>
         <td>
-          <button>Consultar</button>
-          <button>Modificar</button>
-          <button>Activar</button>
+          <button>V</button>
+          <button>M</button>
+          <button>A</button>
         </td>
       </tr>
       <tr>
@@ -79,9 +79,9 @@
         <td>20/08/2021</td>
         <td>NO</td>
         <td>
-          <button>Consultar</button>
-          <button>Modificar</button>
-          <button>Activar</button>
+          <button>V</button>
+          <button>M</button>
+          <button>A</button>
         </td>
       </tr>
       <tr>
@@ -92,9 +92,9 @@
         <td>04/01/2017</td>
         <td>NO</td>
         <td>
-          <button>Consultar</button>
-          <button>Modificar</button>
-          <button>Activar</button>
+          <button>V</button>
+          <button>M</button>
+          <button>A</button>
         </td>
       </tr>
       <tr>
@@ -105,9 +105,9 @@
         <td>20/01/2017</td>
         <td>SI</td>
         <td>
-          <button>Consultar</button>
-          <button>Modificar</button>
-          <button>Activar</button>
+          <button>V</button>
+          <button>M</button>
+          <button>A</button>
         </td>
       </tr>
       <tr>
@@ -118,13 +118,91 @@
         <td>29/12/2016</td>
         <td>SI</td>
         <td>
-          <button>Consultar</button>
-          <button>Modificar</button>
-          <button>Activar</button>
+          <button>V</button>
+          <button>M</button>
+          <button>A</button>
         </td>
       </tr>
     </table>
+  </div>
+  <br>
+  <div>
+    <div>
+      <span>Registros: 192</span>
+    </div>
+    <div>
+      <button> Imprimir</button>
+    </div>
+  </div>
+  <br>
+  <hr>
+
+  <form name="FrmRegistro">
+    <h2>Art&iacute;culos (Agregar)</h2>
+    <hr>
+
+    <form action="" name="FormRegistro">
+      <div>
+        <div>
+          <label for="">Nombre*: </label>
+          <input type="text" name="Nombre" required>
+        </div>
+
+        <div>
+          <label for="">Precio*: </label>
+          <input type="text" name="Precio" required>
+        </div>
+
+        <div>
+          <label for="">Stock*: </label>
+          <input type="text" name="Stock" required>
+        </div>
+
+        <div>
+          <label for="">C&oacute;digo De Barra*: </label>
+          <input type="text" name="CodBarra" required>
+        </div>
+
+        <div>
+          <label for="">Familia*: </label>
+          <select name="Familia">
+            <option value="null" selected></option>
+            <option value="1">ACCESORIOS</option>
+            <option value="2">AUDIO</option>
+            <option value="3">CELULARES</option>
+            <option value="4">CUIDADO PERSONAL</option>
+            <option value="5">DVD</option>
+            <option value="6">FOTOGRAFIA</option>
+            <option value="7">FRIO-CALOR</option>
+            <option value="8">GPS</option>
+            <option value="9">INFORMATICA</option>
+            <option value="10">LED - LCD</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="">Fecha de alta*: </label>
+          <input type="text" name="FechaAlta" required>
+        </div>
     
+        <div>
+          <label for="">Activo*: </label>
+          <select name="Activo" id="">
+            <option value="0" selected></option>
+            <option value="1">SI</option>
+            <option value="2">NO</option>
+          </select>
+        </div>
+    <br>
+    <hr>
+
+    <div>
+      <button> Grabar </button>
+      <button> Cancelar </button>
+    </div>
+  
+  </form>
+  
   </div>
 
 </body>
