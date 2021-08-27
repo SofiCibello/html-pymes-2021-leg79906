@@ -17,21 +17,21 @@
       background-size: cover;
     }
   </style>
-  <h2>Art&iacute;culos (Listado)</h2>
-  <hr>
 
   <form action="" name="FrmBusqueda">
+  <h2>Art&iacute;culos (Listado)</h2>
+  <hr>
     <div>
-      <label for="">Nombre: </label>
-      <input type="text" name="Nombre" required>
+      <label for="Nombre">Nombre: </label>
+      <input type="text" name="Nombre" id="Nombre" required>
     </div>
 
     <div>
-      <label for="">Activo: </label>
+      <label for="Activo">Activo: </label>
       <select name="Activo">
-      <option value="si">SI</option>
-      <option value="no">NO</option>
-      <option value="sinSeleccion" selected>(Sin selecci&oacute;n)</option>
+      <option value="0" selected></option>
+      <option value="1">SI</option>
+      <option value="2">NO</option>
       </select>
     </div>
   </form>
@@ -42,7 +42,7 @@
       Buscar
     </button>
 
-    <button>
+    <button type="button" onclick="document.getElementsByName('FrmRegistro')[0].style.display = ''">
       Agregar
     </button>
   </div>
@@ -66,9 +66,9 @@
         <td>15/01/2017</td>
         <td>NO</td>
         <td>
-          <button>V</button>
-          <button>M</button>
-          <button>A</button>
+          <button type="button">V</button>
+          <button type="button">M</button>
+          <button type="button">A</button>
         </td>
       </tr>
       <tr>
@@ -79,9 +79,9 @@
         <td>20/08/2021</td>
         <td>NO</td>
         <td>
-          <button>V</button>
-          <button>M</button>
-          <button>A</button>
+          <button type="button">V</button>
+          <button type="button">M</button>
+          <button type="button">A</button>
         </td>
       </tr>
       <tr>
@@ -92,9 +92,9 @@
         <td>04/01/2017</td>
         <td>NO</td>
         <td>
-          <button>V</button>
-          <button>M</button>
-          <button>A</button>
+          <button type="button">V</button>
+          <button type="button">M</button>
+          <button type="button">A</button>
         </td>
       </tr>
       <tr>
@@ -105,9 +105,9 @@
         <td>20/01/2017</td>
         <td>SI</td>
         <td>
-          <button>V</button>
-          <button>M</button>
-          <button>A</button>
+          <button type="button">V</button>
+          <button type="button">M</button>
+          <button type="button">A</button>
         </td>
       </tr>
       <tr>
@@ -118,9 +118,9 @@
         <td>29/12/2016</td>
         <td>SI</td>
         <td>
-          <button>V</button>
-          <button>M</button>
-          <button>A</button>
+          <button type="button">V</button>
+          <button type="button">M</button>
+          <button type="button">A</button>
         </td>
       </tr>
     </table>
@@ -137,36 +137,36 @@
   <br>
   <hr>
 
-  <form name="FrmRegistro">
+  <form name="FrmRegistro" style="display: none">
     <h2>Art&iacute;culos (Agregar)</h2>
     <hr>
 
     <form action="" name="FormRegistro">
       <div>
         <div>
-          <label for="">Nombre*: </label>
-          <input type="text" name="Nombre" required>
+          <label for="NombreR">Nombre*: </label>
+          <input type="text" name="NombreR" id="NombreR" required>
         </div>
 
         <div>
           <label for="">Precio*: </label>
-          <input type="text" name="Precio" required>
+          <input type="text" name="Precio" id="Precio" required>
         </div>
 
         <div>
           <label for="">Stock*: </label>
-          <input type="text" name="Stock" required>
+          <input type="text" name="Stock" id="Stock" required>
         </div>
 
         <div>
           <label for="">C&oacute;digo De Barra*: </label>
-          <input type="text" name="CodBarra" required>
+          <input type="text" name="CodBarra" id="CodBarra" required>
         </div>
 
         <div>
           <label for="">Familia*: </label>
           <select name="Familia">
-            <option value="null" selected></option>
+            <option value="0" selected></option>
             <option value="1">ACCESORIOS</option>
             <option value="2">AUDIO</option>
             <option value="3">CELULARES</option>
@@ -182,14 +182,14 @@
 
         <div>
           <label for="">Fecha de alta*: </label>
-          <input type="text" name="FechaAlta" required>
+          <input type="text" name="FechaAlta" id="FechaAlta" required>
         </div>
     
         <div>
           <label for="">Activo*: </label>
-          <select name="Activo" id="">
-            <option value="0" selected></option>
-            <option value="1">SI</option>
+          <select name="Activo" id="ActivoR" disabled>
+            <option value="0"></option>
+            <option value="1" selected>SI</option>
             <option value="2">NO</option>
           </select>
         </div>
@@ -197,10 +197,9 @@
     <hr>
 
     <div>
-      <button> Grabar </button>
-      <button> Cancelar </button>
+      <button type="submit">Grabar</button>
+      <button type="button" onclick="document.getElementsByName('FrmRegistro')[0].style.display = 'none'">Cancelar</button>
     </div>
-  
   </form>
   
   </div>
