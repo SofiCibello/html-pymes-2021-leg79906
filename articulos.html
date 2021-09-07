@@ -10,6 +10,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+  <link rel="stylesheet" href="styles.css">
+
   <style>
     .fakeimg {
       height: 200px;
@@ -78,124 +80,239 @@
     </div>
   </nav>
   <br>
-  
-  <form action="" name="FrmBusqueda">
-    <h2>Art&iacute;culos (Listado)</h2>
-    <hr>
-    <div>
-      <label for="Nombre">Nombre: </label>
-      <input type="text" name="Nombre" id="Nombre" required>
-    </div>
 
-    <div>
-      <label for="Activo">Activo: </label>
-      <select name="Activo">
-      <option value="0" selected></option>
-      <option value="1">SI</option>
-      <option value="2">NO</option>
+  <div _ngcontent-tnc-c104 class="tituloPagina">Art&iacute;culos
+    <small _ngcontent-tnc-c104>(Listado)</small>
+  </div>
+  <form _ngcontent-tnc-c104 novalidate name="FormBusqueda" ng-reflect-form="[object Object]"
+    class="ng-untouched ng-pristine ng-valid">
+    <div _ngcontent-ybf-c104 class="container-fluid">
+      <div _ngcontent-ybf-c104 class="row">
+        <div _ngcontent-ybf-c104 class="col-sm-4 col-md-2">
+          <label _ngcontent-ybf-c104 class="col-form-label" for="Nombre">Nombre: </label>
+        </div>
+        <div _ngcontent-ybf-c104 class="col-sm-8 col-md-4">
+          <input _ngcontent-ybf-c104 type="text" name="Nombre" formcontrolname="Nombre" maxlength="55"
+        class="form-control ng-untouched ng-pristine ng-valid" ng-reflect-name="Nombre" ng-reflect-maxlength="55">
+        </div>
+
+        <div _ngcontent-ybf-c104 class="col-sm-4 col-md-2">
+          <label _ngcontent-ybf-c104 class="col-form-label">Activo:</label>
+        </div>
+        <div _ngcontent-ybf-c104 class="col-sm-8 col-md-4">
+          <select _ngcontent-ybf-c104 name="Activo" formcontrolname="Activo" class="form-control ng-untouched ng-pristine ng-valid" ng-reflect-name="Activo">
+      <option _ngcontent-ybf-c104 value="0: null" selected></option>
+      <option _ngcontent-ybf-c104 value="1: true" ng-reflect-ng-value="true">SI</option>
+      <option _ngcontent-ybf-c104 value="2: false" ng-reflect-ng-value="false">NO</option>
       </select>
+        </div>
+      </div>
     </div>
+
+    <hr _ngcontent-ybf-c104>
+    <div _ngcontent-ybf-c104 class="row justify-content-center botones">
+      <button _ngcontent-ybf-c104 type="button" class="btn btn-primary">
+        <i _ngcontent-ybf-c104 class="fas fa-search" aria-hidden="true"></i>
+    Buscar
+  </button>
+
+      <button _ngcontent-ybf-c104 type="button" class="btn btn-primary">
+      <i _ngcontent-ybf-c104 class="fas fa-plus" aria-hidden="true"></i>
+    Agregar
+  </button>
+    </div>
+
   </form>
-  <hr>
 
-  <div>
-    <button type="submit">
-      Buscar
-    </button>
 
-    <button type="button" onclick="document.getElementsByName('FrmRegistro')[0].style.display = ''">
-      Agregar
-    </button>
-  </div>
   <br><br>
-  <div>
-    <table border="1">
-      <tr>
-        <th>Nombre</th>
-        <th>Precio</th>
-        <th>Stock</th>
-        <th>Familia</th>
-        <th>Fecha de Alta</th>
-        <th>Activo</th>
-        <th>Acciones</th>
-      </tr>
-      <tr>
-        <td>ADAPTADOR PCI WIFI TL-WN751ND</td>
-        <td>$259.00</td>
-        <td>171</td>
-        <td>INFORMATICA</td>
-        <td>15/01/2017</td>
-        <td>NO</td>
-        <td>
-          <button type="button">V</button>
-          <button type="button">M</button>
-          <button type="button">A</button>
-        </td>
-      </tr>
-      <tr>
-        <td>AFSDASDF</td>
-        <td>$88.00</td>
-        <td>2</td>
-        <td>DVD</td>
-        <td>20/08/2021</td>
-        <td>NO</td>
-        <td>
-          <button type="button">V</button>
-          <button type="button">M</button>
-          <button type="button">A</button>
-        </td>
-      </tr>
-      <tr>
-        <td>AIRE ACONDICIONADO DAEWOO 3200FC DWT23200FC</td>
-        <td>$5,899.00</td>
-        <td>668</td>
-        <td>FRIO-CALOR</td>
-        <td>04/01/2017</td>
-        <td>NO</td>
-        <td>
-          <button type="button">V</button>
-          <button type="button">M</button>
-          <button type="button">A</button>
-        </td>
-      </tr>
-      <tr>
-        <td>AIRE ACONDICIONADO DURABRAND 3500FC DUS35WCL4</td>
-        <td>$5,499.00</td>
-        <td>945</td>
-        <td>FRIO-CALOR</td>
-        <td>20/01/2017</td>
-        <td>SI</td>
-        <td>
-          <button type="button">V</button>
-          <button type="button">M</button>
-          <button type="button">A</button>
-        </td>
-      </tr>
-      <tr>
-        <td>AIRE ACONDICIONADO DURABRAND 4500FC DUS53WCL4</td>
-        <td>$7,499.00</td>
-        <td>962</td>
-        <td>FRIO-CALOR</td>
-        <td>29/12/2016</td>
-        <td>SI</td>
-        <td>
-          <button type="button">V</button>
-          <button type="button">M</button>
-          <button type="button">A</button>
-        </td>
-      </tr>
+  <div _ngcontent-ybf-c104 id="divTablaResultados">
+    <table _ngcontent-ybf-c104 class="table table-hover table-sm table-bordered table-striped">
+      <thead _ngcontent-ybf-c104>
+        <tr>
+          <th _ngcontent-ybf-c104 class="text-center">Nombre</th>
+          <th _ngcontent-ybf-c104 class="text-center">Precio</th>
+          <th _ngcontent-ybf-c104 class="text-center">Stock</th>
+          <th _ngcontent-ybf-c104 class="text-center">Familia</th>
+          <th _ngcontent-ybf-c104 class="text-center">Fecha de Alta</th>
+          <th _ngcontent-ybf-c104 class="text-center">Activo</th>
+          <th _ngcontent-ybf-c104 class="text-center text-nowrap">Acciones</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr _ngcontent-ybf-c104>
+          <td _ngcontent-ybf-c104>ADAPTADOR PCI WIFI TL-WN751ND</td>
+          <td _ngcontent-ybf-c104 class="text-right">$259.00</td>
+          <td _ngcontent-ybf-c104 class="text-right">171</td>
+          <td _ngcontent-ybf-c104 class="text-right">INFORMATICA</td>
+          <td _ngcontent-ybf-c104 class="text-right">15/01/2017</td>
+          <td _ngcontent-ybf-c104>NO</td>
+          <td _ngcontent-ybf-c104 class="text-center text-nowrap">
+            <button _ngcontent-ybf-c104 title="Consultar" class="btn btn-sm btn-outline-primary">
+              <i _ngcontent-ybf-c104 class="fas fa-eye" aria-hidden="true"></i>
+            </button>
+            <button _ngcontent-ybf-c104 title="Modificar" class="btn btn-sm btn-outline-primary">
+              <i _ngcontent-ybf-c104 class="fas fa-pencil-alt" aria-hidden="true"></i>
+            </button>
+            <button _ngcontent-ybf-c104 class="btn btn-sm btn-outline-success" title="Activar" ng-reflect-ng-class="[object Object]">
+              <i _ngcontent-ybf-c104 class="fa-check fas" aria-hidden="true"></i>
+            </button>
+          </td>
+        </tr>
+
+        <tr _ngcontent-ybf-c104>
+          <td _ngcontent-ybf-c104>AFSDASDF</td>
+          <td _ngcontent-ybf-c104 class="text-right">$88.00</td>
+          <td _ngcontent-ybf-c104 class="text-right">2</td>
+          <td _ngcontent-ybf-c104 class="text-right">DVD</td>
+          <td _ngcontent-ybf-c104 class="text-right">20/08/2021</td>
+          <td _ngcontent-ybf-c104>NO</td>
+          <td _ngcontent-ybf-c104 class="text-center text-nowrap">
+            <button _ngcontent-ybf-c104 title="Consultar" class="btn btn-sm btn-outline-primary">
+          <i _ngcontent-ybf-c104 class="fas fa-eye" aria-hidden="true"></i>
+        </button>
+            <button _ngcontent-ybf-c104 title="Modificar" class="btn btn-sm btn-outline-primary">
+          <i _ngcontent-ybf-c104 class="fas fa-pencil-alt" aria-hidden="true"></i>
+        </button>
+            <button _ngcontent-ybf-c104 class="btn btn-sm btn-outline-success" title="Activar" ng-reflect-ng-class="[object Object]">
+          <i _ngcontent-ybf-c104 class="fa-check fas" aria-hidden="true"></i>
+        </button>
+          </td>
+        </tr>
+
+        <tr _ngcontent-ybf-c104>
+          <td _ngcontent-ybf-c104>AIRE ACONDICIONADO DAEWOO 3200FC DWT23200FC</td>
+          <td_ngcontent-ybf-c104 class="text-right">$5,899.00</td>
+            <td _ngcontent-ybf-c104 class="text-right">668</td>
+            <td _ngcontent-ybf-c104 class="text-right">FRIO-CALOR</td>
+            <td _ngcontent-ybf-c104 class="text-right">04/01/2017</td>
+            <td _ngcontent-ybf-c104>NO</td>
+            <td _ngcontent-ybf-c104 class="text-center text-nowrap">
+              <button _ngcontent-ybf-c104 title="Consultar" class="btn btn-sm btn-outline-primary">
+            <i _ngcontent-ybf-c104 class="fas fa-eye" aria-hidden="true"></i>
+          </button>
+              <button _ngcontent-ybf-c104 title="Modificar" class="btn btn-sm btn-outline-primary">
+            <i _ngcontent-ybf-c104 class="fas fa-pencil-alt" aria-hidden="true"></i>
+          </button>
+              <button _ngcontent-ybf-c104 class="btn btn-sm btn-outline-success" title="Activar" ng-reflect-ng-class="[object Object]">
+            <i _ngcontent-ybf-c104 class="fa-check fas" aria-hidden="true"></i>
+          </button>
+            </td>
+        </tr>
+
+        <tr _ngcontent-ybf-c104>
+          <td _ngcontent-ybf-c104>AIRE ACONDICIONADO DURABRAND 3500FC DUS35WCL4</td>
+          <td _ngcontent-ybf-c104 class="text-right">$5,499.00</td>
+          <td _ngcontent-ybf-c104 class="text-right">945</td>
+          <td _ngcontent-ybf-c104 class="text-right">FRIO-CALOR</td>
+          <td _ngcontent-ybf-c104 class="text-right">20/01/2017</td>
+          <td _ngcontent-ybf-c104>SI</td>
+          <td _ngcontent-ybf-c104 class="text-center text-nowrap">
+            <button _ngcontent-ybf-c104 title="Consultar" class="btn btn-sm btn-outline-primary">
+          <i _ngcontent-ybf-c104 class="fas fa-eye" aria-hidden="true"></i>
+        </button>
+            <button _ngcontent-ybf-c104 title="Modificar" class="btn btn-sm btn-outline-primary">
+          <i _ngcontent-ybf-c104 class="fas fa-pencil-alt" aria-hidden="true"></i>
+        </button>
+            <button _ngcontent-ybf-c104 class="btn btn-sm btn-outline-success" title="Activar" ng-reflect-ng-class="[object Object]">
+          <i _ngcontent-ybf-c104 class="fa-check fas" aria-hidden="true"></i>
+        </button>
+          </td>
+        </tr>
+
+        <tr _ngcontent-ybf-c104>
+          <td _ngcontent-ybf-c104>AIRE ACONDICIONADO DURABRAND 4500FC DUS53WCL4</td>
+          <td _ngcontent-ybf-c104 class="text-right">$7,499.00</td>
+          <td _ngcontent-ybf-c104 class="text-right">962</td>
+          <td _ngcontent-ybf-c104 class="text-right">FRIO-CALOR</td>
+          <td _ngcontent-ybf-c104 class="text-right">29/12/2016</td>
+          <td _ngcontent-ybf-c104>SI</td>
+          <td _ngcontent-ybf-c104 class="text-center text-nowrap">
+            <button _ngcontent-ybf-c104 title="Consultar" class="btn btn-sm btn-outline-primary">
+          <i _ngcontent-ybf-c104 class="fas fa-eye" aria-hidden="true"></i>
+        </button>
+            <button _ngcontent-ybf-c104 title="Modificar" class="btn btn-sm btn-outline-primary">
+          <i _ngcontent-ybf-c104 class="fas fa-pencil-alt" aria-hidden="true"></i>
+        </button>
+            <button _ngcontent-ybf-c104 class="btn btn-sm btn-outline-success" title="Activar" ng-reflect-ng-class="[object Object]">
+          <i _ngcontent-ybf-c104 class="fa-check fas" aria-hidden="true"></i>
+        </button>
+          </td>
+        </tr>
+      </tbody>
     </table>
+
+    <div _ngcontent-ybf-c104 class="paginador">
+      <div _ngcontent-ybf-c104 class="row">
+        <div _ngcontent-ybf-c104 class="col">
+          <span _ngcontent-ybf-c104 class="pyBadge">Registros: 192</span>
+        </div>
+        <div _ngcontent-ybf-c104 class="col text-center">
+          <ngb-pagination _ngcontent-ybf-c104 role="navigation" ng-reflect-page="1" ng-reflect-page-size="10"
+            ng-reflect-max-size="10" ng-reflect-collection-size="192">
+            <ul class="pagination">
+              <li class="page-item disabled">
+                <a aria-label="Previous" href class="page-link" tabindex="-1" aria-disabled="true">
+                  <span aria-hidden="true">«</span>
+                </a>
+              </li>
+              <li class="page-item active" aria-current="page">
+                <a href class="page-link">1
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="page-item">
+                <a href class="page-link">2</a>
+              </li>
+              <li class="page-item">
+                <a href class="page-link">3</a>
+              </li>
+              <li class="page-item">
+                <a href class="page-link">4</a>
+              </li>
+              <li class="page-item">
+                <a href class="page-link">5</a>
+              </li>
+              <li class="page-item">
+                <a href class="page-link">6</a>
+              </li>
+              <li class="page-item">
+                <a href class="page-link">7</a>
+              </li>
+              <li class="page-item">
+                <a href class="page-link">8</a>
+              </li>
+              <li class="page-item">
+                <a href class="page-link">9</a>
+              </li>
+              <li class="page-item">
+                <a href class="page-link">10</a>
+              </li>
+              <li class="page-item disabled">
+                <a tabindex="-1" aria-disabled="true" class="page-link">...</a>
+              </li>
+              <li class="page-item">
+                <a href class="page-link">20</a>
+              </li>
+              <li class="page-item">
+              <a aria-label="Next" href class="page-link">
+                <span aria-hidden="true">»</span>
+              </a>
+            </li>
+            </ul>
+          </ngb-pagination>
+        </div>
+        <div _ngcontent-ybf-c104 class="col text-right">
+          <button _ngcontent-ybf-c104 class="btn btn-primary">
+            <i _ngcontent-ybf-c104 class="fas fa-print" aria-hidden="true"></i> Imprimir
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
   <br>
-  <div>
-    <div>
-      <span>Registros: 192</span>
-    </div>
-    <div>
-      <button> Imprimir</button>
-    </div>
-  </div>
-  <br>
+
   <hr>
 
   <form name="FrmRegistro" style="display: none">
